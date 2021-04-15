@@ -16,5 +16,9 @@ setup(
     # This will define where to look for the package itself. We are pointing find_packages at the local src directory
     packages=find_packages('src'),
     package_dir={'':'src'},
-    install_requires=[],       
+    install_requires=[],
+    # This is essentially saying: When you are installed, create an executable named hr, that will call the "main" method inside the "cli" module, inside of the "hr" package.
+    entry_points={
+        'console_scripts': 'hr=hr.cli:main'
+    }
 )
