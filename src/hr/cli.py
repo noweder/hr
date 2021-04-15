@@ -37,7 +37,7 @@ def main():
     if args.path:
 
         # If the path is present at all, we are going to open the file, make sure it's writable, and set the newline to be an empty string. We don't want any extra strings or characters in what we are doing.
-        file = open(args.path, 'w', newline=''))
+        file = open(args.path, 'w', newline='')
 
     # If we are NOT writing to a file, then the output is going to be STDOUT
     else:
@@ -49,8 +49,8 @@ def main():
     # is (which is the default), then we'll call the 
     # export module to_json_file and write users out to
     # the fule in JSON format.
-    if arg.format == 'json':
-        export.to_jason_file(file, users)
+    if args.format == 'json':
+        export.to_json_file(file, users)
 
     # And if it's not JSON, then we are planning on it 
     # being csv. We'll call the export module to_csv_file
